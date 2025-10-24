@@ -1,0 +1,87 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 22.08.2025 11:14:43
+// Design Name: 
+// Module Name: control_module
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module control_module(
+    input SW0,
+    input SW1,
+    input SW2,
+    input SW3,
+    input SW4,
+    input SW5,
+    input SW6,
+    input SW7,
+    input SW8,
+    input SW9,
+    output LD0,
+    output LD1,
+    output LD2,
+    output LD3,
+    output LD4,
+    output LD5,
+    output LD6,
+    output LD7,
+    output LD8,
+    output LD9,
+    output SG0,
+    output SG1,
+    output SG2,
+    output SG3,
+    output SG4,
+    output SG5,
+    output SG6,
+    output DP,
+    output AN0,
+    output AN1,
+    output AN2,
+    output AN3
+    );
+    
+    //Subtask A
+    assign LD0 = SW0;
+    assign LD1 = SW1;
+    assign LD2 = SW2;
+    assign LD3 = SW3;
+    assign LD4 = SW4;
+    assign LD5 = SW5;
+    assign LD6 = SW6;
+    assign LD7 = SW7;
+    assign LD8 = SW8;
+    assign LD9 = SW9;
+    
+    //Subtask B
+    assign AN0 = SW0 & SW1 & SW2 & ~SW3 & ~SW4 & ~SW5 & ~SW6 & ~SW7 & ~SW8 & SW9;
+    assign AN2 = SW0 & SW1 & SW2 & ~SW3 & ~SW4 & ~SW5 & ~SW6 & ~SW7 & ~SW8 & SW9;
+    assign AN1 = 0;
+    assign AN3 = 0;
+    assign DP = 1;
+    assign SG0 = 1;
+    assign SG6 = 1;
+    assign SG1 = 0;
+    assign SG2 = 0;
+    assign SG3 = 0;
+    assign SG4 = 0;
+    assign SG5 = 0;
+    
+    
+    
+    
+endmodule
